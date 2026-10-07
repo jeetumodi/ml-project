@@ -1,0 +1,42 @@
+data:
+  data_root: "data"
+  datasets:
+    deepppisp_train: "data/EGCPPIS/Datasets/DeepPPISP/Train_352.fa"
+    deepppisp_test: "data/EGCPPIS/Datasets/DeepPPISP/Test_70.fa"
+    graphppis_train: "data/EGCPPIS/Datasets/GraphPPIS/Train_335.fa"
+    graphppis_test60: "data/EGCPPIS/Datasets/GraphPPIS/Test_60.fa"
+    graphppis_test315: "data/EGCPPIS/Datasets/GraphPPIS/Test_315-28.fa"
+    graphppis_ubtest31: "data/EGCPPIS/Datasets/GraphPPIS/UBtest_31-6.fa"
+  features:
+    pssm_dir: "data/GraphPPIS/Feature/pssm"
+    hmm_dir: "data/GraphPPIS/Feature/hmm"
+    dssp_dir: "data/GraphPPIS/Feature/dssp"
+    dist_dir: "data/GraphPPIS/Feature/distance_map"
+
+model:
+  feature_dim: 74  # Available verified features: one-hot (20) + pssm (20) + hmm (20) + dssp (14)
+  full_paper_dim: 115
+  fused_dim: 148   # 74 * 2 (or 230 in full paper)
+  egnn_depth: 4
+  sage_depth: 4
+  num_heads: 10
+  dropout: 0.2
+  distance_cutoff: 16.0
+  cl_temperature: 0.8
+  cl_lambda: 0.5
+  delta_cl: 0.1
+
+training:
+  lr: 0.0008
+  weight_decay: 0.0
+  epochs: 60
+  scheduler_factor: 0.2
+  scheduler_patience: 5
+  min_lr: 1.0e-6
+  seed: 100000
+  batch_size: 1
+  device: "cuda"
+
+checkpoints:
+  official_best_model: "data/EGCPPIS/model_save/best_model.pth"
+  save_dir: "results/checkpoints"
