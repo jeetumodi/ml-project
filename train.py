@@ -169,4 +169,13 @@ def run_training(n_epochs=60, lr=0.0008, delta=0.1, save_dir="results/checkpoint
     print(f"Checkpoints saved to {save_dir}")
 
 if __name__ == '__main__':
-    run_training(n_epochs=60)
+    import argparse
+    parser = argparse.ArgumentParser(description="Train EGCPPIS Reproduction Model")
+    parser.add_argument("--epochs", type=int, default=60, help="Number of training epochs (default: 60)")
+    parser.add_argument("--lr", type=float, default=0.0008, help="Initial learning rate (default: 0.0008)")
+    parser.add_argument("--delta", type=float, default=0.1, help="Weight for GCL contrastive loss (default: 0.1)")
+    parser.add_argument("--save-dir", type=str, default="results/checkpoints", help="Directory to save model checkpoints")
+    parser.add_argument("--log-dir", type=str, default="results/logs", help="Directory to save training logs")
+    args = parser.parse_args()
+
+    run_training(n_epochs=args.epochs, lr=args.lr, delta=args.delta, save_dir=args.save_dir, log_dir=args.log_dir)
