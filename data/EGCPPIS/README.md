@@ -38,4 +38,11 @@ Test_31.py, Test_60.py, Test_315.py: Independent test scripts for different data
 
 requirements.txt: Lists all dependencies and library versions required to reproduce the experiments.
 
+# Reproduced Figures and Evaluation Paths
+- **ROC Curves:** `results/figures/roc_curves.png`
+- **Precision-Recall Curves:** `results/figures/pr_curves.png`
+- **Training Loss Curves:** `results/figures/loss_curves.png`
+- **Validation Metrics:** `results/figures/validation_metrics.png`
+- **Learning Rate Schedule:** `results/figures/learning_rate.png`
+
 

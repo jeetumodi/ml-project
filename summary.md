@@ -297,8 +297,14 @@ If a wet-lab biologist tests 10 predicted residues suggested by our model on `4f
 - [**`reproduction_report.md`**](file:///c:/Users/jeetu/Desktop/Machine%20learning/PROJECT/reproduction_report.md): Formal scientific research paper reproduction report.
 - [**`data_audit.md`**](file:///c:/Users/jeetu/Desktop/Machine%20learning/PROJECT/data_audit.md): Complete data audit across all 3,062 repository files.
 - [**`EGCPPIS_Reproduction.ipynb`**](file:///c:/Users/jeetu/Desktop/Machine%20learning/PROJECT/EGCPPIS_Reproduction.ipynb): Complete 25-section reproducible Jupyter notebook.
-- **Figures:**
-  - [ROC Curves](file:///c:/Users/jeetu/Desktop/Machine%20learning/PROJECT/results/figures/roc_curves.png)
-  - [Precision-Recall Curves](file:///c:/Users/jeetu/Desktop/Machine%20learning/PROJECT/results/figures/pr_curves.png)
-  - [Loss Trajectories](file:///c:/Users/jeetu/Desktop/Machine%20learning/PROJECT/results/figures/loss_curves.png)
-  - [Validation Metrics](file:///c:/Users/jeetu/Desktop/Machine%20learning/PROJECT/results/figures/validation_metrics.png)
+- **Figures & Visual Artifacts:**
+  - **ROC Curves:** Path: `results/figures/roc_curves.png`
+    ![ROC Curves](results/figures/roc_curves.png)
+  - **Precision-Recall Curves:** Path: `results/figures/pr_curves.png`
+    ![Precision-Recall Curves](results/figures/pr_curves.png)
+  - **Training Loss Trajectories:** Path: `results/figures/loss_curves.png`
+    ![Loss Curves](results/figures/loss_curves.png)
+  - **Validation Metrics Across Epochs:** Path: `results/figures/validation_metrics.png`
+    ![Validation Metrics](results/figures/validation_metrics.png)
+  - **Learning Rate Schedule:** Path: `results/figures/learning_rate.png`
+    ![Learning Rate](results/figures/learning_rate.png)
